@@ -1,5 +1,5 @@
 """
-ASGI config for center project.
+ASGI configs for center project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

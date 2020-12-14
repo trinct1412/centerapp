@@ -1,0 +1,506 @@
+[13/Dec/2020 14:15:11 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/views.py changed, reloading.
+[13/Dec/2020 14:15:11 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/views.py changed, reloading.
+[13/Dec/2020 14:15:12 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:15:12 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:15:49 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/models.py changed, reloading.
+[13/Dec/2020 14:15:49 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/models.py changed, reloading.
+[13/Dec/2020 14:15:50 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:15:50 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:16:16 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/urls.py changed, reloading.
+[13/Dec/2020 14:16:16 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/urls.py changed, reloading.
+[13/Dec/2020 14:16:16 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:16:16 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:16:20 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/urls.py changed, reloading.
+[13/Dec/2020 14:16:20 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/urls.py changed, reloading.
+[13/Dec/2020 14:16:21 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:16:21 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:16:27 django.request-ERROR (log.py:224 log_response)]: Internal Server Error: /admin/customer/customer/
+Traceback (most recent call last):
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 79, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'customer_customer.shorted_access_token' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/contrib/admin/options.py", line 1811, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/query.py", line 269, in __len__
+    self._fetch_all()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/debug_toolbar/panels/sql/tracking.py", line 198, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/debug_toolbar/panels/sql/tracking.py", line 133, in _record
+    return method(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 79, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'customer_customer.shorted_access_token' in 'field list'")
+[13/Dec/2020 14:16:27 django.request-ERROR (log.py:224 log_response)]: Internal Server Error: /admin/customer/customer/
+Traceback (most recent call last):
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 79, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'customer_customer.shorted_access_token' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/contrib/admin/options.py", line 1811, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/query.py", line 269, in __len__
+    self._fetch_all()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/debug_toolbar/panels/sql/tracking.py", line 198, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/debug_toolbar/panels/sql/tracking.py", line 133, in _record
+    return method(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 79, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/tringuyen/PycharmProjects/facebookApp/center/lib/python3.9/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'customer_customer.shorted_access_token' in 'field list'")
+[13/Dec/2020 14:16:27 django.server-ERROR (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 500 247017
+[13/Dec/2020 14:16:27 django.server-ERROR (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 500 247017
+[13/Dec/2020 14:16:51 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13384
+[13/Dec/2020 14:16:51 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13384
+[13/Dec/2020 14:16:51 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:16:51 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:16:57 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/customer/customer/ HTTP/1.1" 200 12875
+[13/Dec/2020 14:16:57 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/customer/customer/ HTTP/1.1" 200 12875
+[13/Dec/2020 14:16:59 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/customer/customer/ HTTP/1.1" 302 0
+[13/Dec/2020 14:16:59 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/customer/customer/ HTTP/1.1" 302 0
+[13/Dec/2020 14:16:59 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 12152
+[13/Dec/2020 14:16:59 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 12152
+[13/Dec/2020 14:16:59 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:16:59 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:17:00 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13778
+[13/Dec/2020 14:17:00 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13778
+[13/Dec/2020 14:17:00 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:17:00 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:17:04 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/page/page/ HTTP/1.1" 200 12512
+[13/Dec/2020 14:17:04 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/page/page/ HTTP/1.1" 200 12512
+[13/Dec/2020 14:17:05 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/page/page/ HTTP/1.1" 302 0
+[13/Dec/2020 14:17:05 django.server-INFO (basehttp.py:157 log_message)]: "POST /admin/page/page/ HTTP/1.1" 302 0
+[13/Dec/2020 14:17:05 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 12128
+[13/Dec/2020 14:17:05 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 12128
+[13/Dec/2020 14:17:05 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:17:05 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:17:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /user/callback HTTP/1.1" 200 5482
+[13/Dec/2020 14:17:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /user/callback HTTP/1.1" 200 5482
+[13/Dec/2020 14:17:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /?code=AQBUH8f4UQVT7bQ6Wp_UDHac6bNVt0kXsOvC5Q4eiCURNFi9SkjeHuXJYtsznBTFSl-zJ-1v59tvFYvx0a5s5rFbwsV3G0iVOwe-zwGpg9OmX0BPxaHUhblRHFzMgOohQ-OfwE0FvQ0jx_z30n8_NyFrVpaXtZK__lds4Q_sPXFNdWpFphmvk8NYfRSFsx1Au-uq_3Ht_GXDZ9SUKSnMo03PDCu6B13XtlhGIZfBoGEy-m4dsnXDtc2gVQh3Y7JvO-bu3PNJOSmXaA1s_ujaws4AFNtgdIP4NWrrHAZFmJ0f-KWQP1UVD3txDoN5f4nK6hR7F0GCkDD_BwoxU5DDVDft HTTP/1.1" 200 8
+[13/Dec/2020 14:17:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /?code=AQBUH8f4UQVT7bQ6Wp_UDHac6bNVt0kXsOvC5Q4eiCURNFi9SkjeHuXJYtsznBTFSl-zJ-1v59tvFYvx0a5s5rFbwsV3G0iVOwe-zwGpg9OmX0BPxaHUhblRHFzMgOohQ-OfwE0FvQ0jx_z30n8_NyFrVpaXtZK__lds4Q_sPXFNdWpFphmvk8NYfRSFsx1Au-uq_3Ht_GXDZ9SUKSnMo03PDCu6B13XtlhGIZfBoGEy-m4dsnXDtc2gVQh3Y7JvO-bu3PNJOSmXaA1s_ujaws4AFNtgdIP4NWrrHAZFmJ0f-KWQP1UVD3txDoN5f4nK6hR7F0GCkDD_BwoxU5DDVDft HTTP/1.1" 200 8
+[13/Dec/2020 14:18:12 get_api-WARNING (rq.py:28 get_response)]: METHOD=GET
+STATUS=400
+CLASS=BaseRequest
+URL=https://graph.facebook.com/v9.0/oauth/access_token?client_id=2586040028170400&redirect_uri=https%3A%2F%2F7761587b7857.ngrok.io%2F&client_secret=fbdf2f3366974aca738d782e1be4a259&code=AQBUH8f4UQVT7bQ6Wp_UDHac6bNVt0kXsOvC5Q4eiCURNFi9SkjeHuXJYtsznBTFSl-zJ-1v59tvFYvx0a5s5rFbwsV3G0iVOwe-zwGpg9OmX0BPxaHUhblRHFzMgOohQ-OfwE0FvQ0jx_z30n8_NyFrVpaXtZK__lds4Q_sPXFNdWpFphmvk8NYfRSFsx1Au-uq_3Ht_GXDZ9SUKSnMo03PDCu6B13XtlhGIZfBoGEy-m4dsnXDtc2gVQh3Y7JvO-bu3PNJOSmXaA1s_ujaws4AFNtgdIP4NWrrHAZFmJ0f-KWQP1UVD3txDoN5f4nK6hR7F0GCkDD_BwoxU5DDVDft 
+RESPONSE={"error": {"message": "This authorization code has been used.", "type": "OAuthException", "code": 100, "error_subcode": 36009, "fbtrace_id": "Aw-Gmmoh9i5GKXSQXsmwJCa"}}
+
+[13/Dec/2020 14:18:12 get_api-WARNING (rq.py:28 get_response)]: METHOD=GET
+STATUS=400
+CLASS=Info
+URL=https://graph.facebook.com/v9.0/me?fields=email,name,id,first_name,last_name 
+RESPONSE={"error": {"message": "An active access token must be used to query information about the current user.", "type": "OAuthException", "code": 2500, "fbtrace_id": "A1jleBAW42OaI0aJRwqHFP4"}}
+
+[13/Dec/2020 14:18:12 django.server-INFO (basehttp.py:157 log_message)]: "GET /?code=AQBUH8f4UQVT7bQ6Wp_UDHac6bNVt0kXsOvC5Q4eiCURNFi9SkjeHuXJYtsznBTFSl-zJ-1v59tvFYvx0a5s5rFbwsV3G0iVOwe-zwGpg9OmX0BPxaHUhblRHFzMgOohQ-OfwE0FvQ0jx_z30n8_NyFrVpaXtZK__lds4Q_sPXFNdWpFphmvk8NYfRSFsx1Au-uq_3Ht_GXDZ9SUKSnMo03PDCu6B13XtlhGIZfBoGEy-m4dsnXDtc2gVQh3Y7JvO-bu3PNJOSmXaA1s_ujaws4AFNtgdIP4NWrrHAZFmJ0f-KWQP1UVD3txDoN5f4nK6hR7F0GCkDD_BwoxU5DDVDft HTTP/1.1" 200 0
+[13/Dec/2020 14:18:12 django.server-INFO (basehttp.py:157 log_message)]: "GET /?code=AQBUH8f4UQVT7bQ6Wp_UDHac6bNVt0kXsOvC5Q4eiCURNFi9SkjeHuXJYtsznBTFSl-zJ-1v59tvFYvx0a5s5rFbwsV3G0iVOwe-zwGpg9OmX0BPxaHUhblRHFzMgOohQ-OfwE0FvQ0jx_z30n8_NyFrVpaXtZK__lds4Q_sPXFNdWpFphmvk8NYfRSFsx1Au-uq_3Ht_GXDZ9SUKSnMo03PDCu6B13XtlhGIZfBoGEy-m4dsnXDtc2gVQh3Y7JvO-bu3PNJOSmXaA1s_ujaws4AFNtgdIP4NWrrHAZFmJ0f-KWQP1UVD3txDoN5f4nK6hR7F0GCkDD_BwoxU5DDVDft HTTP/1.1" 200 0
+[13/Dec/2020 14:18:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /user/callback HTTP/1.1" 302 0
+[13/Dec/2020 14:18:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /user/callback HTTP/1.1" 302 0
+[13/Dec/2020 14:18:25 django.server-INFO (basehttp.py:157 log_message)]: "GET /?code=AQAAQct_8bpymq7UQxWbkq4yovlC_EtlGTE9bLqt38GPHXX5EOseP7jKThRlQANx7kH3O4_LJMAHyK-nd0GBnYea1o9Ps_8DQq6IHhW0OcMNcBMP7ABIasa72X0NDJcZ3eqX6uZiVAPSfnCx4u1qlyD7w4qBQK7QOOMAto_Sd8t9EQ4GQmX7dBnxcSZtngLnh38Xc9KxSxeJBq3Sl_Cgm-PQOu3TohfSh_4hiQXhf7ZLILzBxvLmccQlo3NLXdsM0clqWA1aQls7BfRqDMgJav2Gv9xfNi0VhQLzapq7vOJY3McbPJttkBp8m0B8eTl0klDqVew_WZOuw7M6FIqdV5Sk HTTP/1.1" 200 8
+[13/Dec/2020 14:18:25 django.server-INFO (basehttp.py:157 log_message)]: "GET /?code=AQAAQct_8bpymq7UQxWbkq4yovlC_EtlGTE9bLqt38GPHXX5EOseP7jKThRlQANx7kH3O4_LJMAHyK-nd0GBnYea1o9Ps_8DQq6IHhW0OcMNcBMP7ABIasa72X0NDJcZ3eqX6uZiVAPSfnCx4u1qlyD7w4qBQK7QOOMAto_Sd8t9EQ4GQmX7dBnxcSZtngLnh38Xc9KxSxeJBq3Sl_Cgm-PQOu3TohfSh_4hiQXhf7ZLILzBxvLmccQlo3NLXdsM0clqWA1aQls7BfRqDMgJav2Gv9xfNi0VhQLzapq7vOJY3McbPJttkBp8m0B8eTl0klDqVew_WZOuw7M6FIqdV5Sk HTTP/1.1" 200 8
+[13/Dec/2020 14:18:52 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/models.py changed, reloading.
+[13/Dec/2020 14:18:52 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/models.py changed, reloading.
+[13/Dec/2020 14:18:54 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:18:54 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:19:02 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:02 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:02 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:02 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:19:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:19:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:08 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/62/change/ HTTP/1.1" 200 28309
+[13/Dec/2020 14:19:08 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/62/change/ HTTP/1.1" 200 28309
+[13/Dec/2020 14:19:08 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:08 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:19:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:19:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:19:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:19:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:26 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:19:26 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:19:26 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:26 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:27 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:27 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:27 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:27 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:29 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/25/change/ HTTP/1.1" 200 16687
+[13/Dec/2020 14:19:29 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/25/change/ HTTP/1.1" 200 16687
+[13/Dec/2020 14:19:29 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:29 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:33 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/24/change/ HTTP/1.1" 200 16698
+[13/Dec/2020 14:19:33 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/24/change/ HTTP/1.1" 200 16698
+[13/Dec/2020 14:19:33 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:33 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:36 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/23/change/ HTTP/1.1" 200 16745
+[13/Dec/2020 14:19:36 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/23/change/ HTTP/1.1" 200 16745
+[13/Dec/2020 14:19:36 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:36 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:38 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:38 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:19:38 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:38 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/22/change/ HTTP/1.1" 200 16736
+[13/Dec/2020 14:19:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/22/change/ HTTP/1.1" 200 16736
+[13/Dec/2020 14:19:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:46 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:19:46 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:19:46 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:46 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:47 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:19:47 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:19:47 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:47 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/group/ HTTP/1.1" 200 12348
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/group/ HTTP/1.1" 200 12348
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:49 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:19:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:19:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/1/change/ HTTP/1.1" 200 25417
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/1/change/ HTTP/1.1" 200 25417
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4257
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4257
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12350
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12350
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[13/Dec/2020 14:19:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[13/Dec/2020 14:20:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:20:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:20:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:20:04 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:20:06 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:20:06 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:20:06 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:20:06 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:12 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:22:12 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:22:12 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:12 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:22:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:22:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/23/change/ HTTP/1.1" 200 16745
+[13/Dec/2020 14:22:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/23/change/ HTTP/1.1" 200 16745
+[13/Dec/2020 14:22:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/22/change/ HTTP/1.1" 200 16736
+[13/Dec/2020 14:22:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/22/change/ HTTP/1.1" 200 16736
+[13/Dec/2020 14:22:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:25 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/25/change/ HTTP/1.1" 200 16687
+[13/Dec/2020 14:22:25 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/25/change/ HTTP/1.1" 200 16687
+[13/Dec/2020 14:22:25 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:25 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:22:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:22:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:22:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:39 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:42 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:22:42 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:22:42 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:42 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:45 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/62/change/ HTTP/1.1" 200 28309
+[13/Dec/2020 14:22:45 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/62/change/ HTTP/1.1" 200 28309
+[13/Dec/2020 14:22:45 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:22:45 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:23:41 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:23:41 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:23:44 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:23:44 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:23:44 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:23:44 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:25:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:25:15 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:25:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/62/change/ HTTP/1.1" 200 28309
+[13/Dec/2020 14:25:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/62/change/ HTTP/1.1" 200 28309
+[13/Dec/2020 14:25:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:25:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:25:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:25:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:25:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:25:54 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:25:57 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:25:57 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:25:57 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:25:57 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:26:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:26:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:19 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:22 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/24/change/ HTTP/1.1" 200 16698
+[13/Dec/2020 14:26:22 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/24/change/ HTTP/1.1" 200 16698
+[13/Dec/2020 14:26:22 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:22 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:26:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:26:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:31 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:32 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:26:32 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:26:32 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:32 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:34 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:26:34 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:26:34 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:26:34 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:28:49 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/models.py changed, reloading.
+[13/Dec/2020 14:28:49 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/customer/models.py changed, reloading.
+[13/Dec/2020 14:28:51 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:28:51 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:32:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:32:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:32:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:32:13 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:32:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:32:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:32:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:32:50 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:32:52 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:32:52 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:32:53 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:32:53 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:33:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:33:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:33:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:33:14 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:33:17 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:33:17 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/61/change/ HTTP/1.1" 200 28301
+[13/Dec/2020 14:33:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:33:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:35:29 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/settings.py changed, reloading.
+[13/Dec/2020 14:35:29 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/settings.py changed, reloading.
+[13/Dec/2020 14:35:31 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:35:31 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:37:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:37:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:37:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:16 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:37:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/page/ HTTP/1.1" 200 13777
+[13/Dec/2020 14:37:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:18 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:37:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/customer/customer/ HTTP/1.1" 200 13468
+[13/Dec/2020 14:37:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:20 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:37:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:37:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:21 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/group/ HTTP/1.1" 200 12348
+[13/Dec/2020 14:37:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/group/ HTTP/1.1" 200 12348
+[13/Dec/2020 14:37:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:23 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:24 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:37:24 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/auth/user/ HTTP/1.1" 200 16293
+[13/Dec/2020 14:37:24 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:37:24 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:40:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:40:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/page/feed/ HTTP/1.1" 200 11993
+[13/Dec/2020 14:40:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:40:35 django.server-INFO (basehttp.py:157 log_message)]: "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[13/Dec/2020 14:42:29 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/celery.py changed, reloading.
+[13/Dec/2020 14:42:29 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/celery.py changed, reloading.
+[13/Dec/2020 14:42:31 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:42:31 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:45:17 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/celery.py changed, reloading.
+[13/Dec/2020 14:45:17 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/celery.py changed, reloading.
+[13/Dec/2020 14:45:19 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:45:19 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:47:28 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/celery.py changed, reloading.
+[13/Dec/2020 14:47:28 django.utils.autoreload-INFO (autoreload.py:240 trigger_reload)]: /Users/tringuyen/PycharmProjects/center/center/celery.py changed, reloading.
+[13/Dec/2020 14:47:29 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
+[13/Dec/2020 14:47:29 django.utils.autoreload-INFO (autoreload.py:617 run_with_reloader)]: Watching for file changes with StatReloader
