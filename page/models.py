@@ -21,18 +21,13 @@ class PageStatus(Enum):
 class Page(models.Model):
     status = EnumField(PageStatus, default=PageStatus.STATUS_DISABLE, verbose_name=_('status'))
 
-    name = models.CharField(max_length=255, blank=False, null=False, verbose_name=_('page_name'))
-    fb_id = models.CharField(max_length=50, null=True, unique=True, verbose_name=_('page_fb_id'))
-    access_token = models.TextField(null=True, blank=True, verbose_name=_('page_access_token'))
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created_at'))
+    name = models.CharField(max_length=255, blank=False, null=False, verbose_name=_('name'))
+    fb_id = models.CharField(max_length=50, null=True, unique=True, verbose_name=_('fb_id'))
+    access_token = models.TextField(null=True, blank=True, verbose_name=_('access_token'))
+    created_at = models.DateTimeField(null=False, blank=False, default=timezone.now, verbose_name=_('created_at'))
     fan_count = models.IntegerField(default=0, verbose_name=_('fan_count'))
     avatar = models.ImageField(upload_to='page/', blank=True, null=True, verbose_name=_('avatar'))
     customers = models.ManyToManyField(Customer, related_name='pages', verbose_name=_('customer'))
-
-    class Meta:
-        permissions = (
-            ('view_version', _('View Version')),
-        )
 
     def __str__(self):
         return str(self.name)
@@ -48,7 +43,7 @@ class Page(models.Model):
 
 
 class Feed(models.Model):
-    fb_id = models.CharField(unique=True, max_length=50, null=True, blank=True, verbose_name=_('feed_fb_id'))
+    fb_id = models.CharField(unique=True, max_length=50, null=True, blank=True, verbose_name=_('fb_id'))
     message = models.TextField(null=True, blank=True, verbose_name=_('messgae'))
     permalink_url = models.SlugField(blank=True, null=True, verbose_name=_('permalink_url'))
     created_time = models.DateTimeField(null=False, blank=False, default=timezone.now, verbose_name=_('created_time'))
