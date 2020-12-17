@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
 DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com/']
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Rest framework definition
 
 
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'center.urls'
