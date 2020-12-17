@@ -12,15 +12,17 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
-# create location save logging file
-if not os.path.exists('django-logging'):
-    os.mkdir('django-logging')
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Direction logger save
 LOGGER_DIR = os.environ.get('LOGGER_DIR', './logs')
+
+
+# create location save logging file
+if not os.path.exists('django-logging'):
+    os.mkdir('django-logging')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -31,7 +33,7 @@ SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1','centerapp-network.herokuapp.com']
 
 # Rest framework definition
 
@@ -47,7 +49,7 @@ REST_FRAMEWORK = {
 
 INSTALLED_APPS = [
     'page.apps.PageConfig',
-    'customer.apps.CustomerConfig',
+    'customer',
     'debug_toolbar',
     'rest_framework',
     'django.contrib.admin',
@@ -69,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 # config debug toolbar sql
@@ -94,7 +98,7 @@ ROOT_URLCONF = 'center.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('templates'))],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,6 +115,7 @@ WSGI_APPLICATION = 'center.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -132,6 +137,7 @@ if DEBUG:
             'PORT': '3306',
         }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -161,11 +167,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 DEBUG_DIRECTED_FILE = "django-logging"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Config celery
 BROKER_URL = 'redis://localhost:6379'
@@ -236,3 +242,4 @@ LOGGING = {
             "datefmt": "%d/%b/%Y %H:%M:%S"},
     },
 }
+

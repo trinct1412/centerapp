@@ -52,12 +52,11 @@ class Customer(User):
         # Save long access token for customer
         access_token = {}
         try:
-            access_token = self.get_access_token(self.shorted_access_token)
+            access_token = self.get_access_token(self.shorted_access_token).json()
         except Exception as e:
             logging.getLogger('user_create').error(e)
             self.is_valid_access_token = False
 
-        access_token = access_token.json()
         self.access_token = access_token['access_token']
         self.is_valid_access_token = True
         self.expires_in = access_token.get('expires_in')

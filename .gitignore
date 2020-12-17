@@ -1,5 +1,6 @@
 # Created by https://www.gitignore.io/api/django
 django-logging/
+staticfiles/
 ### Django ###
 *.log
 *.pot
