@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
@@ -84,7 +84,6 @@ WSGI_APPLICATION = 'center.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 if DEBUG:
-    SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
