@@ -95,6 +95,10 @@ if DEBUG:
         }
     }
 else:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
