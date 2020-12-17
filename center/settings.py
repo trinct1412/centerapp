@@ -18,11 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Direction logger save
 LOGGER_DIR = os.environ.get('LOGGER_DIR', './logs')
 
-
 # create location save logging file
 if not os.path.exists('django-logging'):
     os.mkdir('django-logging')
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -33,7 +31,7 @@ SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1','centerapp-network.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com']
 
 # Rest framework definition
 
@@ -138,7 +136,6 @@ if DEBUG:
         }
     }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -242,4 +239,3 @@ LOGGING = {
             "datefmt": "%d/%b/%Y %H:%M:%S"},
     },
 }
-

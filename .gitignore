@@ -14,7 +14,6 @@ version
 .vscode
 
 ### DEV ENV file ##
-test.py
 /local_test
 rsa.pub
 rsa.priv
