@@ -98,7 +98,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgresql',
+            'NAME': 'postgresql-regular-40130',
         }
     }
     DATABASE_URL = 'postgresql://<postgresql>'
