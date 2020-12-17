@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
-#create location save logging file
+# create location save logging file
 if not os.path.exists('django-logging'):
     os.mkdir('django-logging')
 
@@ -165,6 +165,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 DEBUG_DIRECTED_FILE = "django-logging"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Config celery
 BROKER_URL = 'redis://localhost:6379'
