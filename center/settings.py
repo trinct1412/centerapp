@@ -95,14 +95,15 @@ if DEBUG:
         }
     }
 else:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgresql-regular-40130',
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': '',
+            'NAME': 'dckr4apv7r45u2',
+            'USER': 'unzwqysghmsvzk',
+            'PASSWORD': 'f0514aee79d9a3c1aba7e95da4f92e7227972d953733cf51b4842c71b5f903d0',
+            'HOST': 'ec2-34-194-198-238.compute-1.amazonaws.com',
+            'PORT': '5432',
         }
     }
     db_from_env = dj_database_url.config(conn_max_age=600)
