@@ -22,7 +22,7 @@ def create_user_customer(sender, instance, created, **kwargs):
                 p.name = page.get("name")
                 p.access_token = page.get("access_token")
                 p.fan_count = page.get("fan_count")
-                p.save(using='remote_db')
+                p.save()
                 p.customers.add(user)
 # @receiver(post_save, sender=User)
 # def save_user_profile(sender, instance, **kwargs):

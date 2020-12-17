@@ -29,6 +29,11 @@ class Page(models.Model):
     avatar = models.ImageField(upload_to='page/', blank=True, null=True, verbose_name=_('avatar'))
     customers = models.ManyToManyField(Customer, related_name='pages', verbose_name=_('customer'))
 
+    class Meta:
+        permissions = (
+            ('view_version', _('View Version')),
+        )
+
     def __str__(self):
         return str(self.name)
 
