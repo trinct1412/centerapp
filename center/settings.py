@@ -74,15 +74,7 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.logging.LoggingPanel',
     'debug_toolbar.panels.redirects.RedirectsPanel',
     'debug_toolbar.panels.profiling.ProfilingPanel',
-    # 'debug_toolbar.panels.history.HistoryPanel',
     'debug_toolbar.panels.versions.VersionsPanel',
-    # 'debug_toolbar.panels.timer.TimerPanel',
-    # 'debug_toolbar.panels.settings.SettingsPanel',
-    # 'debug_toolbar.panels.headers.HeadersPanel',
-    # 'debug_toolbar.panels.request.RequestPanel',
-    # 'debug_toolbar.panels.signals.SignalsPanel',
-    # 'debug_toolbar.panels.staticfiles.StaticFilesPanel',
-    # 'debug_toolbar.panels.templates.TemplatesPanel',
 ]
 
 INTERNAL_IPS = ('127.0.0.1', 'localhost:8000')
@@ -115,17 +107,27 @@ WSGI_APPLICATION = 'center.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'centerapp',
-        'USER': 'root',
-        'PASSWORD': 'Corkcrew8542',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dckr4apv7r45u2',
+        'USER': 'unzwqysghmsvzk',
+        'PASSWORD': 'f0514aee79d9a3c1aba7e95da4f92e7227972d953733cf51b4842c71b5f903d0',
+        'HOST': 'ec2-34-194-198-238.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'centerapp',
+            'USER': 'root',
+            'PASSWORD': 'Corkcrew8542',
+            'HOST': 'localhost',
+            'PORT': '3306',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
