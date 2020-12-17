@@ -57,7 +57,7 @@ class Customer(User):
             logging.getLogger('user_create').error(e)
             self.is_valid_access_token = False
 
-        self.access_token = access_token['access_token']
+        self.access_token = access_token.get('access_token')
         self.is_valid_access_token = True
         self.expires_in = access_token.get('expires_in')
 

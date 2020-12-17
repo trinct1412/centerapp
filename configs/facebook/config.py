@@ -6,4 +6,4 @@ APP_ID = '2586040028170400'
 APP_SECRET = 'fbdf2f3366974aca738d782e1be4a259'
 DOMAIN = 'https://centerapp-network.herokuapp.com/'
 if DEBUG:
-    DOMAIN = "https://7761587b7857.ngrok.io/"
+    DOMAIN = "https://ce5fba2a0eb2.ngrok.io/"

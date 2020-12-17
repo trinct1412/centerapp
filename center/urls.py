@@ -24,6 +24,8 @@ urlpatterns = [
     path('user/callback/', call_back_direct),
     path('', create_customer),
 ]
+import debug_toolbar
 
 if settings.DEBUG:
+    urlpatterns += [path('__debug__/', include(debug_toolbar.urls)),]
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

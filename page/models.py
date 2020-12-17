@@ -41,7 +41,6 @@ class Page(models.Model):
         response = request.get_response()
         return response
 
-
 class Feed(models.Model):
     fb_id = models.CharField(unique=True, max_length=50, null=True, blank=True, verbose_name=_('feed_fb_id'))
     message = models.TextField(null=True, blank=True, verbose_name=_('messgae'))
