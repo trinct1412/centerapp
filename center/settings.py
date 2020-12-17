@@ -9,38 +9,41 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
-from pathlib import Path
 import os
-import dj_database_url
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Direction logger save
+LOGGER_DIR = os.environ.get('LOGGER_DIR', './logs')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# Config Directions
-ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com/']
 
 # Rest framework definition
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASeSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 # Application definition
 
 INSTALLED_APPS = [
-    'customer',
+    'page.apps.PageConfig',
+    'customer.apps.CustomerConfig',
     'debug_toolbar',
     'rest_framework',
     'django.contrib.admin',
@@ -52,13 +55,7 @@ INSTALLED_APPS = [
     'celery',
     'django_celery_beat',
 ]
-REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASeSES': [
-        'rest_framework.permissions.AllowAny',
-    ]
-}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -68,9 +65,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+# config debug toolbar sql
 DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.sql.SQLPanel',
     'debug_toolbar.panels.cache.CachePanel',
@@ -93,6 +90,8 @@ INTERNAL_IPS = ('127.0.0.1', 'localhost:8000')
 DEBUG_TOOLBAR_CONFIG = {
     'SKIP_TEMPLATE_PREFIXES': ('admin/widgets/',),
 }
+
+# end
 
 ROOT_URLCONF = 'center.urls'
 
@@ -117,31 +116,17 @@ WSGI_APPLICATION = 'center.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'centerapp',
-            'USER': 'root',
-            'PASSWORD': 'Corkcrew8542',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'centerapp',
+        'USER': 'root',
+        'PASSWORD': 'Corkcrew8542',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
-else:
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'dckr4apv7r45u2',
-            'USER': 'unzwqysghmsvzk',
-            'PASSWORD': 'f0514aee79d9a3c1aba7e95da4f92e7227972d953733cf51b4842c71b5f903d0',
-            'HOST': 'ec2-34-194-198-238.compute-1.amazonaws.com',
-            'PORT': '5432',
-        }
-    }
-    db_from_env = dj_database_url.config(conn_max_age=600)
-    DATABASES['default'].update(db_from_env)
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -159,9 +144,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

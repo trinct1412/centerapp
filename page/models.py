@@ -21,13 +21,13 @@ class PageStatus(Enum):
 class Page(models.Model):
     status = EnumField(PageStatus, default=PageStatus.STATUS_DISABLE, verbose_name=_('status'))
 
-    name = models.CharField(max_length=255, blank=False, null=False)
-    fb_id = models.CharField(max_length=50, null=True, unique=True)
-    access_token = models.TextField(null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    fan_count = models.IntegerField(default=0)
-    avatar = models.ImageField(upload_to='page/', blank=True, null=True)
-    customers = models.ManyToManyField(Customer, related_name='pages')
+    name = models.CharField(max_length=255, blank=False, null=False, verbose_name=_('page_name'))
+    fb_id = models.CharField(max_length=50, null=True, unique=True, verbose_name=_('page_fb_id'))
+    access_token = models.TextField(null=True, blank=True, verbose_name=_('page_access_token'))
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created_at'))
+    fan_count = models.IntegerField(default=0, verbose_name=_('fan_count'))
+    avatar = models.ImageField(upload_to='page/', blank=True, null=True, verbose_name=_('avatar'))
+    customers = models.ManyToManyField(Customer, related_name='pages', verbose_name=_('customer'))
 
     def __str__(self):
         return str(self.name)
@@ -43,13 +43,14 @@ class Page(models.Model):
 
 
 class Feed(models.Model):
-    fb_id = models.CharField(unique=True, max_length=50, null=True, blank=True)
-    message = models.TextField(null=True, blank=True)
-    # attachments = models.TextField(null=True, blank=True)
-    permalink_url = models.TextField(blank=True, null=True)
-    created_time = models.DateTimeField(null=False, blank=False, default=timezone.now)
+    fb_id = models.CharField(unique=True, max_length=50, null=True, blank=True, verbose_name=_('feed_fb_id'))
+    message = models.TextField(null=True, blank=True, verbose_name=_('messgae'))
+    permalink_url = models.SlugField(blank=True, null=True, verbose_name=_('permalink_url'))
+    created_time = models.DateTimeField(null=False, blank=False, default=timezone.now, verbose_name=_('created_time'))
     page = models.ForeignKey(Page, null=True, blank=True,
-                             related_name="posts", on_delete=models.CASCADE)
+                             related_name="posts", on_delete=models.CASCADE, verbose_name=_('page'))
+
+    # attachments = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return str((self.message, self.page))

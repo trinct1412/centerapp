@@ -7,6 +7,7 @@ import configs.facebook.params
 import configs.facebook.mission
 import configs.facebook.field
 import logging
+from django.utils.translation import ugettext_lazy as _
 
 
 class Customer(User):
@@ -16,15 +17,15 @@ class Customer(User):
     email
     is_staff==false,is_active==true has default
     """
-    access_token = models.TextField(blank=True, null=True)
+    access_token = models.TextField(blank=True, null=True, verbose_name=_('access_token'))
     fb_id = models.CharField(max_length=50,
                              unique=True,
-                             blank=True, null=True)
-    phone = models.CharField(max_length=13, blank=True, null=True)
-    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
-    expires_in = models.IntegerField(blank=True, null=True)
-    is_valid_access_token = models.BooleanField(default=False)
-    shorted_access_token = models.TextField(blank=True, null=True)
+                             blank=True, null=True, verbose_name=_('fb_id'))
+    phone = models.CharField(max_length=13, blank=True, null=True, verbose_name=_('phone'))
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True, verbose_name=_('avatar'))
+    expires_in = models.IntegerField(blank=True, null=True, verbose_name=_('expires_in'))
+    is_valid_access_token = models.BooleanField(default=False, verbose_name=_('is_valid_access_token'))
+    shorted_access_token = models.TextField(blank=True, null=True, verbose_name=_('shorted_access_token'))
 
     @property
     def full_name(self):
@@ -49,17 +50,17 @@ class Customer(User):
 
     def build_long_live_access_token(self):
         # Save long access token for customer
+        access_token = {}
         try:
             access_token = self.get_access_token(self.shorted_access_token)
-            if access_token:
-                access_token = access_token.json()
-                self.access_token = access_token['access_token']
-                self.is_valid_access_token = True
-                self.expires_in = access_token.get('expires_in')
-            # End
         except Exception as e:
             logging.getLogger('user_create').error(e)
             self.is_valid_access_token = False
+
+        access_token = access_token.json()
+        self.access_token = access_token['access_token']
+        self.is_valid_access_token = True
+        self.expires_in = access_token.get('expires_in')
 
     def save(self, *args, **kwargs):
         user_info = self.get_info_user(self.shorted_access_token).json()
