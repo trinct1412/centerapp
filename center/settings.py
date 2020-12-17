@@ -31,7 +31,7 @@ DEBUG = False
 # Config Directions
 ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Rest framework definition
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'center.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+
 if DEBUG:
     DATABASES = {
         'default': {
@@ -94,7 +94,15 @@ if DEBUG:
             'PORT': '3306',
         }
     }
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'postgresql',
+        }
+    }
+    DATABASE_URL = 'postgresql://<postgresql>'
+    DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
