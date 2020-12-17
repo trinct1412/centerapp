@@ -28,6 +28,7 @@ Markdown==3.3.3
 mysqlclient==2.0.1
 Pillow==8.0.1
 prompt-toolkit==3.0.8
+psycopg2-binary==2.8.6
 pycparser==2.20
 PyMySQL==0.10.1
 python-crontab==2.5.1
