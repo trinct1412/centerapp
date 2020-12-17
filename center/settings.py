@@ -99,6 +99,10 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'postgresql-regular-40130',
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
         }
     }
     db_from_env = dj_database_url.config(conn_max_age=600)
