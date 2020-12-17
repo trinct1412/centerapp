@@ -26,7 +26,7 @@ class Page(models.Model):
     access_token = models.TextField(null=True, blank=True, verbose_name=_('access_token'))
     created_at = models.DateTimeField(null=False, blank=False, default=timezone.now, verbose_name=_('created_at'))
     fan_count = models.IntegerField(default=0, verbose_name=_('fan_count'))
-    avatar = models.ImageField(upload_to='page/', blank=True, null=True, verbose_name=_('avatar'))
+    # avatar = models.ImageField(upload_to='page/', blank=True, null=True, verbose_name=_('avatar'))
     customers = models.ManyToManyField(Customer, related_name='pages', verbose_name=_('customer'))
 
     def __str__(self):
