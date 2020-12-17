@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# Config Directions
 ALLOWED_HOSTS = ['localhost', '.ngrok.io', '127.0.0.1', 'centerapp-network.herokuapp.com']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 # Rest framework definition
 
 
@@ -75,17 +82,19 @@ WSGI_APPLICATION = 'center.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'centerapp',
-        'USER': 'root',
-        'PASSWORD': 'Corkcrew8542',
-        'HOST': 'localhost',
-        'PORT': '3306',
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+if DEBUG:
+    SECRET_KEY = '5l95p1l-oysw*i-+ukje#g6ied0tbz-4(4w(%^w45upg+_uf3&'
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'centerapp',
+            'USER': 'root',
+            'PASSWORD': 'Corkcrew8542',
+            'HOST': 'localhost',
+            'PORT': '3306',
+        }
     }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
